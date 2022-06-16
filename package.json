@@ -6,14 +6,15 @@
   "dependencies": {
     "axios": "^0.27.2",
     "cors": "^2.8.5",
-    "express": "^4.18.1",
-    "nodemon": "^2.0.16"
+    "express": "^4.18.1"
   },
   "devDependencies": {
-    "eslint": "^8.17.0"
+    "eslint": "^8.17.0",
+    "nodemon": "^2.0.16"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/caleriggs/node-express-class/issues"
   },
-  "homepage": "https://github.com/caleriggs/node-express-class#readme"
+  "homepage": "https://github.com/caleriggs/node-express-class#readme",
+  "type": "module"
 }

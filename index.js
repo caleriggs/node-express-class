@@ -10,6 +10,12 @@ app.use(express.json());
 
 app.get("/", (req, res) => res.send("OK"));
 
+app.get("/weather", async (req, res) => {
+  const weatherData = await weatherServiceClient();
+  console.log("weather data: ", weatherData);
+  res.json(weatherData);
+});
+
 app.listen(port, () =>
   console.log("App listening on : ", `http://localhost:${port}`)
 );

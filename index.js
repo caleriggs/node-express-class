@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { weatherServiceClient } from "./v1/serviceClients/weatherService.js";
+import v1 from "./v1/routes/v1.js";
 
 const app = express();
 const port = 1138;
@@ -10,11 +10,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => res.send("OK"));
 
-app.get("/weather", async (req, res) => {
-  const weatherData = await weatherServiceClient();
-  console.log("weather data: ", weatherData);
-  res.json(weatherData);
-});
+app.use("/v1", v1);
 
 app.listen(port, () =>
   console.log("App listening on : ", `http://localhost:${port}`)
